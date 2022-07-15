@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css?family=Kumbh+Sans&display=swap');
+
+:root {
+
+}
+
+h1 {
+  text-align: center;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+span {
+  width: 105px;
+  height: 80px;
+}
+
+.navbar {
+  background: #3f4e4f;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  /* height: 40px; */
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 50px; /* this is where the 50 comes from lol*/
+  padding-left: 50px;
+}
+
+#navbar__logo {
+  background-color: white;
+  /* background-image: linear-gradient(to top, #a27b5c 0%, #dcd6c9 1e00%); */
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+#navbar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+
+.navbar__item {
+  margin-top: 20px;
+  height: 40px;
+}
+
+.navbar__links {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+}
+
+.navbar__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 23px;
+  padding: 0 1rem;
+  width: 100%;
+  height: 35px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background: #a27b5c;
+  color: #fff;
+}
+
+span.ayo {
+  width: 150px;
+}
+
+.button:hover {
+  background: #b5957c;
+  transition: all 0.3s ease;
+  color: #2c3639;
+}
+
+.navbar__item:hover {
+  transition: all 0.2s ease;
+}
+
+/* might not need*/
+.active, .navbar__item:hover  {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 700px) {
+  .navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0;
+  }
+
+  #navbar__menu {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: -1000px;
+    opacity: 1;
+    transition: all 0.4s ease-in-out;
+    height: 50vh;
+    z-index: -1;
+  }
+
+  #navbar__menu.bruh {
+    background: #3f4e4f;
+    top: 100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 99;
+    height: 50vh;
+    font-size: 1.6rem;
+  }
+
+  #navbar__logo {
+    padding-left: 50px;
+  }
+
+  .navbar__toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: #fff;
+  }
+
+  span {
+    display: table;
+    margin: 0 auto;
+  }
+
+  .navbar__item {
+    align-content: center;
+    width: 100%;
+    transition: all 0.2s ease;
+  }
+
+  .navbar__item:hover {
+    justify-content: center;
+    /* font-size: 1.8rem; */
+    color: #b5957c;
+    animation: linear;
+    transition: all 0.2s ease;
+  }
+
+  .active, .navbar__item:hover  {
+    text-decoration: underline;
+  }
+
+  .navbar__links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .navbar__btn {
+    height: 100px;
+    width: 400px;
+    padding-bottom: 2rem;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 80px;
+    margin: 0;
+  }
+
+  #mobile-menu {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+  }
+
+  .navbar__toggle .bar {
+    display: block;
+    cursor: pointer;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  #mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
