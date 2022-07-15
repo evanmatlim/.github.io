@@ -4,6 +4,10 @@
 
 }
 
+html, body {
+  /* overflow-x: hidden; */
+}
+
 h1 {
   text-align: center;
 }
@@ -14,11 +18,6 @@ h1 {
   margin: 0;
   padding: 0;
   font-family: 'Kumbh Sans', sans-serif;
-}
-
-span {
-  width: 105px;
-  height: 80px;
 }
 
 .navbar {
@@ -42,8 +41,8 @@ span {
   max-width: 1300px;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 50px; /* this is where the 50 comes from lol*/
-  padding-left: 50px;
+  padding-right: 30px;
+  /* padding-left: 30px; */
 }
 
 #navbar__logo {
@@ -59,6 +58,7 @@ span {
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
+  padding-left: 30px;
 }
 
 #navbar__menu {
@@ -68,8 +68,12 @@ span {
   text-align: center;
 }
 
+.navbar__toggle {
+  margin-top: -5px;
+}
+
 .navbar__item {
-  margin-top: 20px;
+  /* margin-top: 20px; */
   height: 40px;
 }
 
@@ -87,7 +91,6 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 23px;
   padding: 0 1rem;
   width: 100%;
   height: 35px;
@@ -106,10 +109,6 @@ span {
   border-radius: 4px;
   background: #a27b5c;
   color: #fff;
-}
-
-span.ayo {
-  width: 150px;
 }
 
 .button:hover {
@@ -161,10 +160,6 @@ span.ayo {
     font-size: 1.6rem;
   }
 
-  #navbar__logo {
-    padding-left: 50px;
-  }
-
   .navbar__toggle .bar {
     width: 25px;
     height: 3px;
@@ -173,13 +168,7 @@ span.ayo {
     background: #fff;
   }
 
-  span {
-    display: table;
-    margin: 0 auto;
-  }
-
   .navbar__item {
-    align-content: center;
     width: 100%;
     transition: all 0.2s ease;
   }
@@ -205,8 +194,9 @@ span.ayo {
 
   .navbar__btn {
     height: 100px;
-    width: 400px;
-    padding-bottom: 2rem;
+    width: 100vw; /* THIS IS THE PROBLEM LINE (separates button
+    from other elements and causes unwanted white space*/
+    /* padding-bottom: ; */
   }
 
   .button {
