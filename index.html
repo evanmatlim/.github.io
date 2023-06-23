@@ -2,31 +2,97 @@
 <html lang="en">
 
 <head>
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="app.js"></script>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>Evan Lim</title>
   <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Waterfall' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 </head>
 
 <body>
-  <div id="nav-placeholder"></div>
 
-  <div>
-    <header>
-      <h1>
-        <br>
-        THIS IS MY HOME PAGE
-      </h1>
-    </header>
-  </div>
+  <!-- ------------------------ BEGIN ------------------------ -->
+  <div class="main-container flex-centered">
+    <!-- Content -->
+    <div class="inner-container">
+      <!-- Overlay bars -->
+      <div class="top-bar overlay above"></div>
+      <div class="left-bar overlay below"></div>
+      <div class="bottom-bar overlay above"></div>
+      <div class="right-bar overlay below"></div>
+      <div class="intersection-bar overlay above"></div>
+      <div class="top">
+
+      </div>
+      <div class="center flex-centered">
+        <div class="center-block">
+          <div class="name flex-centered">
+            Evan Lim
+          </div>
+          <div class="role flex-centered">
+            software developer
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="home-navbar">
+          <div class="nav-button">
+            <div class="about-button button-text flex-centered thing transition">
+              About Me
+            </div>
+            <svg class="thing transition"><rect class="button-trace"/></svg>
+          </div>
+          <div class="nav-button">
+            <div class="projects-button button-text flex-centered thing transition">
+              Projects
+            </div>
+            <svg class="thing transition"><rect class="button-trace"/></svg>
+          </div>
+          <div class="nav-button">
+            <div class="experience-button button-text flex-centered thing transition">
+              Experience
+            </div>
+            <svg class="thing transition"><rect class="button-trace"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
   
-  <script>
-  $(function(){
-    $("#nav-placeholder").load("nav.html");
-  });
-  </script>
+
+  <!-- ------------------------ EXPERIMENTS ------------------------ -->
+  <!-- <div id="container">
+    <div id="left-right">
+      <div class="sub-container left">
+        left (expand to right)
+      </div>
+      <div class="sub-container right">
+        right (expand to the left)
+      </div>
+    </div>
+    <div id="top-bottom">
+      <div class="sub-container top">
+        top (expand downwards)
+      </div>
+      <div class="sub-container bottom">
+        bottom (expand upwards)
+      </div>
+    </div>
+  </div> -->
+  <!-- ------------------------ GARBAGE ------------------------ -->
+  <!-- <div id="desktop-curve1"></div>
+  <div id="desktop-curve2"></div>
+  <div class="navbar" id="desktop-menu">
+    <div class="nav-item" id="start-active"> Test 1 </div>
+    <div class="nav-item"> Test 2 </div>
+    <div class="nav-item"> Test 3 </div>
+    <div class="nav-item"> Test 4 </div>
+  </div>
+  <div class="navbar" id="mobile-menu">
+    <div class="nav-item" id="start-active2"> Test 1 </div>
+    <div class="nav-item"> Test 2 </div>
+    <div class="nav-item"> Test 3 </div>
+    <div class="nav-item"> Test 4 </div>
+  </div> -->
 </body>
+<script type="text/javascript" src="app.js"></script>
 </html>
