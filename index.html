@@ -13,89 +13,73 @@
 
   <!-- ------------------------ BEGIN ------------------------ -->
   <div class="main-container flex-centered">
-    <!-- Content -->
     <div class="inner-container">
+      
+      <!-- Temporary Menu -->
+      <div class="menu">
+        <div class="butt transition flex-centered first active">1</div>
+        <div class="butt transition flex-centered second">2</div>
+        <div class="butt transition flex-centered third">3</div>
+        <div class="butt transition flex-centered fourth">4</div>
+      </div>
+      <div id="display" class="menu flex-centered transition alive"></div>
+
       <!-- Overlay bars -->
-      <div class="top-bar overlay above"></div>
+      <div class="top-bar overlay"></div>
       <div class="left-bar overlay below"></div>
-      <div class="bottom-bar overlay above"></div>
+      <div class="bottom-bar overlay"></div>
       <div class="right-bar overlay below"></div>
       <div class="intersection-bar overlay above"></div>
-      <div class="top">
 
+      <!-- TOP -->
+      <div class="top">
+        <div id="links-container">
+          <a href="https://www.linkedin.com/in/evan-lim-611445227/" target="_blank"><img src="images/linkedin.png" class="link transition"></a>
+          <a href="https://github.com/evanmatlim" target="_blank"><img src="images/githubtransparent.png" class="link transition"></a>
+          <a href="https://drive.google.com/file/d/1wP1UFh8xWUhpolYC9H-YdK6vOgV_wVEW/view?usp=sharing" target="_blank"><img src="images/whiteresumepng.png" class="link transition"></a>
+        </div>
       </div>
+
+      <!-- CENTER -->
       <div class="center flex-centered">
         <div class="center-block">
           <div class="name flex-centered">
             Evan Lim
           </div>
-          <div class="role flex-centered">
-            software developer
+          <div class="role-container flex-centered">
+          <div class="role replace flex-centered during"></div>
+          <div class="role replace flex-centered pre"></div>
           </div>
-          <div class="in-progress flex-centered">
+          <!-- <div class="in-progress flex-centered">
             (website in progress)
-          </div>
+          </div> -->
         </div>
       </div>
+
+      <!-- BOTTOM -->
       <div class="bottom">
         <div class="home-navbar">
-          <div class="nav-button">
-            <div class="about-button button-text flex-centered thing transition">
+          <div class="nav-button-container">
+            <div class="about-button button-text flex-centered nav-button transition">
               About Me
             </div>
-            <svg class="thing transition"><rect class="button-trace"/></svg>
+            <svg class="nav-button transition"><rect class="button-trace"/></svg>
           </div>
-          <div class="nav-button">
-            <div class="projects-button button-text flex-centered thing transition">
+          <div class="nav-button-container">
+            <div class="projects-button button-text flex-centered nav-button transition">
               Projects
             </div>
-            <svg class="thing transition"><rect class="button-trace"/></svg>
+            <svg class="nav-button transition"><rect class="button-trace"/></svg>
           </div>
-          <div class="nav-button">
-            <div class="experience-button button-text flex-centered thing transition">
+          <div class="nav-button-container">
+            <div class="experience-button button-text flex-centered nav-button transition">
               Experience
             </div>
-            <svg class="thing transition"><rect class="button-trace"/></svg>
+            <svg class="nav-button transition"><rect class="button-trace"/></svg>
           </div>
         </div>
       </div>
     </div>
-  
-
-  <!-- ------------------------ EXPERIMENTS ------------------------ -->
-  <!-- <div id="container">
-    <div id="left-right">
-      <div class="sub-container left">
-        left (expand to right)
-      </div>
-      <div class="sub-container right">
-        right (expand to the left)
-      </div>
-    </div>
-    <div id="top-bottom">
-      <div class="sub-container top">
-        top (expand downwards)
-      </div>
-      <div class="sub-container bottom">
-        bottom (expand upwards)
-      </div>
-    </div>
-  </div> -->
-  <!-- ------------------------ GARBAGE ------------------------ -->
-  <!-- <div id="desktop-curve1"></div>
-  <div id="desktop-curve2"></div>
-  <div class="navbar" id="desktop-menu">
-    <div class="nav-item" id="start-active"> Test 1 </div>
-    <div class="nav-item"> Test 2 </div>
-    <div class="nav-item"> Test 3 </div>
-    <div class="nav-item"> Test 4 </div>
-  </div>
-  <div class="navbar" id="mobile-menu">
-    <div class="nav-item" id="start-active2"> Test 1 </div>
-    <div class="nav-item"> Test 2 </div>
-    <div class="nav-item"> Test 3 </div>
-    <div class="nav-item"> Test 4 </div>
-  </div> -->
 </body>
 <script type="text/javascript" src="app.js"></script>
 </html>

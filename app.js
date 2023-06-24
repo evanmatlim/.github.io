@@ -1,12 +1,12 @@
 // ------------------------ BEGIN ------------------------
 
-let containers = document.getElementsByClassName("thing");
-for (let i = 0; i < containers.length; i++) {
-    containers[i].addEventListener('mouseenter', expand, false);
-}
 let buttons = document.getElementsByClassName("nav-button");
 for (let i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('mouseout', reset, false);
+    buttons[i].addEventListener('mouseenter', expand, false);
+}
+let containers = document.getElementsByClassName("nav-button-container");
+for (let i = 0; i < containers.length; i++) {
+    containers[i].addEventListener('mouseout', reset, false);
 }
 function expand(evt) {
     evt.currentTarget.classList.add('hovered');
@@ -21,23 +21,22 @@ function reset(evt) {
     }
 }  
 
-
 // ------------------------ Overlay bar placement ------------------------
 
-    let mainContainer = document.getElementsByClassName('main-container')[0];
-    let innerContainer = document.getElementsByClassName('inner-container')[0];
-    let topBar = document.getElementsByClassName('top-bar')[0];
-    let leftBar = document.getElementsByClassName('left-bar')[0];
-    let bottomBar = document.getElementsByClassName('bottom-bar')[0];
-    let rightBar = document.getElementsByClassName('right-bar')[0];
-    let intersectionBar = document.getElementsByClassName('intersection-bar')[0];
-    
-    // some things unused as of now
-    const topBarHeight = 80, topBarWidthSpace = 220, topBarOverlap = 50;
-    const leftBarWidth = 100, leftBarOverlap = 40;
-    const bottomBarHeight = 75, bottomBarWidthSpace = 180, bottomBarOverlap = 50;
-    const rightBarWidth = 210, rightBarOverlap = 110;
-    let innerWidth, innerHeight, horizontalMargin, verticalMargin;
+let mainContainer = document.getElementsByClassName('main-container')[0];
+let innerContainer = document.getElementsByClassName('inner-container')[0];
+let topBar = document.getElementsByClassName('top-bar')[0];
+let leftBar = document.getElementsByClassName('left-bar')[0];
+let bottomBar = document.getElementsByClassName('bottom-bar')[0];
+let rightBar = document.getElementsByClassName('right-bar')[0];
+let intersectionBar = document.getElementsByClassName('intersection-bar')[0];
+
+// some things unused as of now
+const topBarHeight = 80, topBarWidthSpace = 220, topBarOverlap = 50;
+const leftBarWidth = 100, leftBarOverlap = 40;
+const bottomBarHeight = 75, bottomBarWidthSpace = 180, bottomBarOverlap = 50;
+const rightBarWidth = 210, rightBarOverlap = 110;
+let innerWidth, innerHeight, horizontalMargin, verticalMargin;
 
 // don't need to recalculate a lot of these values since they remain constant
 function recalculate() {
@@ -90,59 +89,99 @@ displayOverlay();
 
 window.onresize = displayOverlay;
 
-// ------------------------ EXPERIMENTS ------------------------
+// ------------------------ Role Replacement ------------------------
+let modes = ['replace', 'drop', 'slide-out', 'slide-both'];
+let titles = ['software engineer', 'aspiring designer', 'avid dancer', 'plant enthusiast', 'music enjoyer'] //, 'dana lover', 'teehee <3', 'i knew you\'d see this :)', 'ok bye'];
+const numTitles = titles.length;
+const roles = Array.from(document.getElementsByClassName('role'));
+let nextIndex;
 
-// let containers = document.getElementsByClassName("sub-container");
-// for (let i = 0; i < containers.length; i++) {
-//     containers[i].addEventListener('mouseover', expand, false);
-//     containers[i].addEventListener('mouseleave', reset, false);
-// }
-// // params: class, transformed state, change
-// containers[0].myParam = ['left', 'left-expanded', 'right', 'right-shrunken']; 
-// containers[1].myParam = ['right', 'right-expanded', 'left', 'left-shrunken']; 
-// containers[2].myParam = ['top', 'top-expanded', 'bottom', 'bottom-shrunken']; 
-// containers[3].myParam = ['bottom', 'bottom-expanded', 'top', 'top-shrunken']; 
+function cycleTitles() {
+    nextIndex = (nextIndex + 1) % numTitles;
+}
 
-// function expand(evt) {
-//     var p = evt.currentTarget.myParam;
-//     var expandedBox = p[0], transform = p[1], shrinkedBox = p[2], shrinkTransform = p[3];
-//     document.getElementsByClassName(expandedBox)[0].classList.toggle(transform);
-//     document.getElementsByClassName(shrinkedBox)[0].classList.toggle(shrinkTransform);
-// }
+function initializeTitles() {
+    roles[0].innerHTML = titles[0];
+    roles[1].innerHTML = titles[1];
+    nextIndex = 1;
+}
+// repeated logic... can make method to make more concise. maybe use dictionary nextStatus?
+function fadeOut() {
+    for (let role of roles) {
+        if (role.classList.contains('during')) {
+            role.classList.remove('during');
+            role.classList.add('post');
+        }
+    }
+}
 
-// function reset(evt) {
-//     var p = evt.currentTarget.myParam;
-//     var expandedBox = p[0], transform = p[1], shrinkedBox = p[2], shrinkTransform = p[3];
-//     document.getElementsByClassName(expandedBox)[0].classList.toggle(transform);
-//     document.getElementsByClassName(shrinkedBox)[0].classList.toggle(shrinkTransform);
-// }
+function fadeIn() {
+    for (let role of roles) {
+        if (role.classList.contains('pre')) {
+            role.classList.remove('pre');
+            role.classList.add('during');
+        }
+    }
+}
 
-// ------------------------ GARBAGE ------------------------
+function prepare() {
+    for (let role of roles) {
+        if (role.classList.contains('post')) {
+            role.classList.remove('post');
+            role.classList.add('pre');
+            role.innerHTML = titles[nextIndex];
+        }
+    }
+}
 
-// let button = document.getElementById("button");
+function doCycle() {
+    cycleTitles();
+    fadeOut();
+    setTimeout(fadeIn, 250);
+    setTimeout(prepare, 1450);
+}
 
-// function turnRed() {
-//     document.getElementById("button").style.color = "red";
-// }
+initializeTitles();
+window.setInterval(doCycle, 3400);
 
-// button.onclick = turnRed;
+// ------------------------ Toggle Buttons ------------------------
+let numbers = Array.from(document.getElementsByClassName('butt'));
+for (let i = 0; i < numbers.length; i++) {
+    numbers[i].addEventListener('click', activate, false);
+    numbers[i].addEventListener('mouseover', displayTitle, false);
+    numbers[i].addEventListener('mouseleave', removeTitle, false);
+    numbers[i].myParam = i;
+}
 
-// let navItems = document.querySelectorAll(".nav-item");
+let descriptors = ['fade in + fade out', 'drop in + drop out', 'fade in + slide out', 'slide in + slide out']
+let currentMode = document.getElementById('display');
+currentMode.innerHTML = descriptors[0];
+let stayIndex = 0;
 
-// function initializeNavbar() {
-//     let items = document.querySelectorAll('.nav-item');
-//     items.forEach(item => {
-//       item.addEventListener('click', (e) => {
-//         items.forEach(otherItem => otherItem.classList.remove('active'));
-//         item.classList.add('active');
-//         });
-//     });
-// }
+function displayTitle(evt) {
+    let i = evt.currentTarget.myParam;
+    currentMode.innerHTML = descriptors[i];
+}
+function removeTitle(evt) {
+    let hovered = evt.currentTarget;
+    if (!hovered.classList.contains('stay')){
+        currentMode.innerHTML = descriptors[stayIndex];
+    }
+}
 
-// function startActive() {
-//     document.getElementById("start-active").classList.add('active');
-//     document.getElementById("start-active2").classList.add('active');
-// }
-
-// initializeNavbar();
-// startActive();  
+function activate(evt) {
+    let pressed = evt.currentTarget;
+    if (!(pressed.classList.contains('active'))) {
+        for (let i = 0; i < numbers.length; i++) {
+            numbers[i].classList.remove('active', 'stay');
+        }
+        pressed.classList.add('active', 'stay');
+        stayIndex = pressed.myParam;
+        
+        let mode = modes[pressed.myParam];
+        for (let role of roles) {
+            role.classList.remove('replace', 'drop', 'slide-out', 'slide-both');
+            role.classList.add(mode);
+        }
+    }
+}
