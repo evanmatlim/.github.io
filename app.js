@@ -91,7 +91,7 @@ window.onresize = displayOverlay;
 
 // ------------------------ Role Replacement ------------------------
 let modes = ['replace', 'drop', 'slide-out', 'slide-both'];
-let titles = ['software engineer', 'aspiring designer', 'avid dancer', 'plant enthusiast', 'music enjoyer'] //, 'dana lover', 'teehee <3', 'i knew you\'d see this :)', 'ok bye'];
+let titles = ['software engineer', 'aspiring designer', 'avid dancer', 'plant enthusiast', 'music enjoyer', 'dana lover', 'teehee <3', 'i knew you\'d see this :)', 'ok bye'];
 const numTitles = titles.length;
 const roles = Array.from(document.getElementsByClassName('role'));
 let nextIndex;
