@@ -11,7 +11,8 @@ html, body {
     min-height: 650px;
     width: 100%;
     min-width: 980px;
-    background-color: #B9B9B9;
+    /* background-color: #B9B9B9; */
+    background-color: #A1A7CA;
     z-index: 0;
     /* z-index: -3; THIS TOOK HOURS TO FIND AHHARGGRH*/ 
     position: relative;
@@ -23,7 +24,8 @@ html, body {
     max-height: 640px;
     width: 80%;
     max-width: 1050px;
-    background-color: #313131;
+    /* background-color: #313131; */
+    background-image: linear-gradient(to bottom left, #000B47, #B1B5CA);
     /* background-image: linear-gradient(to bottom right, #070b79, #b2a6a6); */
 }
 /* ------------------------ DIVISIONS ------------------------ */
@@ -45,13 +47,19 @@ html, body {
 }
 
 #links-container {
-    height: 40px;
-    width: 150px;
-    margin-right: 35px;
+    height: 30px;
+    width: 170px;
+    margin-right: 25px;
     margin-top: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    /* background-color: white; */
+    align-items: center;
+    /* vertical-align: bottom; */
+}
+.link-icon{
+    height: 100%;
 }
 img.link {
     height: 100%;
@@ -60,7 +68,10 @@ img.link {
 img.link:hover {
     opacity: 1;
 }
-
+#mail {
+    height: 22px;
+    width: 28px;
+}
 
 /* ------------------------ CENTER ------------------------ */
 .center-block {
@@ -103,7 +114,7 @@ img.link:hover {
     top: 0;
     opacity: 1;
 }
-.drop.pre {
+/* .drop.pre {
     top: -20px;
 }
 .drop.post {
@@ -120,6 +131,12 @@ img.link:hover {
 }
 .slide-both.post {
     left: 100px;
+} */
+.rise.pre {
+    top: 20px;
+}
+.rise.post {
+    top: -20px;
 }
 /* ------------------------ BOTTOM ------------------------ */
 .home-navbar {
@@ -131,22 +148,28 @@ img.link:hover {
     justify-content: space-between;
 }
 .about-button {
-    background-color: #909090;
+    /* background-color: #909090; */
+    background-color: #212b66;
 }
 .projects-button {
-    background-color: #767676;
+    /* background-color: #767676; */
+    background-color: #434C80;
 }
 .experience-button {
-    background-color: #606060;
+    /* background-color: #606060; */
+    background-color: #59639a;
 }
 .about-button.hovered {
-    background-color: #ACACAC;
+    /* background-color: #ACACAC; */
+    background-color: #4855a3;
 }
 .projects-button.hovered {
-    background-color: #989898;
+    /* background-color: #989898; */
+    background-color: #5965ab;
 }
 .experience-button.hovered {
-    background-color: #858585;
+    /* background-color: #858585; */
+    background-color: #6b77bc;
 }
 .button-text {
     z-index: 2;
@@ -187,7 +210,8 @@ svg.hovered {
 /* ------------------------ OVERLAY ------------------------ */
 .overlay {
     position: absolute;
-    background-color: #858383;
+    /* background-color: #858383; */
+    background-color: #424660;
     /* background-color: #555671; */
     opacity: 50%;
 }

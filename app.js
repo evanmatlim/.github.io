@@ -90,8 +90,8 @@ displayOverlay();
 window.onresize = displayOverlay;
 
 // ------------------------ Role Replacement ------------------------
-let modes = ['replace', 'drop', 'slide-out', 'slide-both'];
-let titles = ['software engineer', 'aspiring designer', 'avid dancer', 'plant enthusiast', 'music enjoyer', 'dana lover', 'teehee <3', 'i knew you\'d see this :)', 'ok bye'];
+let modes = ['replace', 'drop', 'slide-out', 'slide-both', 'rise'];
+let titles = ['software engineer', 'aspiring designer', 'avid dancer', 'plant enthusiast', 'music enjoyer'] //, 'dana lover', 'teehee <3', 'i knew you\'d see this :)', 'ok bye'];
 const numTitles = titles.length;
 const roles = Array.from(document.getElementsByClassName('role'));
 let nextIndex;
@@ -142,46 +142,46 @@ function doCycle() {
 }
 
 initializeTitles();
-window.setInterval(doCycle, 3400);
+window.setInterval(doCycle, 2600);
 
 // ------------------------ Toggle Buttons ------------------------
-let numbers = Array.from(document.getElementsByClassName('butt'));
-for (let i = 0; i < numbers.length; i++) {
-    numbers[i].addEventListener('click', activate, false);
-    numbers[i].addEventListener('mouseover', displayTitle, false);
-    numbers[i].addEventListener('mouseleave', removeTitle, false);
-    numbers[i].myParam = i;
-}
+// let numbers = Array.from(document.getElementsByClassName('butt'));
+// for (let i = 0; i < numbers.length; i++) {
+//     numbers[i].addEventListener('click', activate, false);
+//     numbers[i].addEventListener('mouseover', displayTitle, false);
+//     numbers[i].addEventListener('mouseleave', removeTitle, false);
+//     numbers[i].myParam = i;
+// }
 
-let descriptors = ['fade in + fade out', 'drop in + drop out', 'fade in + slide out', 'slide in + slide out']
-let currentMode = document.getElementById('display');
-currentMode.innerHTML = descriptors[0];
-let stayIndex = 0;
+// let descriptors = ['fade in + fade out', 'drop in + drop out', 'fade in + slide out', 'slide in + slide out', 'rising']
+// let currentMode = document.getElementById('display');
+// currentMode.innerHTML = descriptors[0];
+// let stayIndex = 0;
 
-function displayTitle(evt) {
-    let i = evt.currentTarget.myParam;
-    currentMode.innerHTML = descriptors[i];
-}
-function removeTitle(evt) {
-    let hovered = evt.currentTarget;
-    if (!hovered.classList.contains('stay')){
-        currentMode.innerHTML = descriptors[stayIndex];
-    }
-}
+// function displayTitle(evt) {
+//     let i = evt.currentTarget.myParam;
+//     currentMode.innerHTML = descriptors[i];
+// }
+// function removeTitle(evt) {
+//     let hovered = evt.currentTarget;
+//     if (!hovered.classList.contains('stay')){
+//         currentMode.innerHTML = descriptors[stayIndex];
+//     }
+// }
 
-function activate(evt) {
-    let pressed = evt.currentTarget;
-    if (!(pressed.classList.contains('active'))) {
-        for (let i = 0; i < numbers.length; i++) {
-            numbers[i].classList.remove('active', 'stay');
-        }
-        pressed.classList.add('active', 'stay');
-        stayIndex = pressed.myParam;
+// function activate(evt) {
+//     let pressed = evt.currentTarget;
+//     if (!(pressed.classList.contains('active'))) {
+//         for (let i = 0; i < numbers.length; i++) {
+//             numbers[i].classList.remove('active', 'stay');
+//         }
+//         pressed.classList.add('active', 'stay');
+//         stayIndex = pressed.myParam;
         
-        let mode = modes[pressed.myParam];
-        for (let role of roles) {
-            role.classList.remove('replace', 'drop', 'slide-out', 'slide-both');
-            role.classList.add(mode);
-        }
-    }
-}
+//         let mode = modes[pressed.myParam];
+//         for (let role of roles) {
+//             role.classList.remove('replace', 'drop', 'slide-out', 'slide-both', 'rise');
+//             role.classList.add(mode);
+//         }
+//     }
+// }
