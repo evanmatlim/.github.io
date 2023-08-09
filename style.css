@@ -3,7 +3,6 @@ html, body {
     height: 100%;
     width: 100%;
     margin: 0;
-    overflow: scroll;
 }
 
 .main-container {
@@ -11,10 +10,9 @@ html, body {
     min-height: 650px;
     width: 100%;
     min-width: 980px;
-    /* background-color: #B9B9B9; */
-    background-color: #A1A7CA;
+    background-color: #B9B9B9;
+    /* background-color: #A1A7CA; */
     z-index: 0;
-    /* z-index: -3; THIS TOOK HOURS TO FIND AHHARGGRH*/ 
     position: relative;
 }
 
@@ -24,8 +22,8 @@ html, body {
     max-height: 640px;
     width: 80%;
     max-width: 1050px;
-    /* background-color: #313131; */
-    background-image: linear-gradient(to bottom left, #000B47, #B1B5CA);
+    background-color: #313131;
+    /* background-image: linear-gradient(to bottom left, #000B47, #B1B5CA); */
     background-size: 150% 100%;
     -webkit-animation: Animation 7s ease-in-out infinite;
     -moz-animation: Animation 7s ease-in-out infinite;
@@ -120,7 +118,6 @@ img.link:hover {
     font-family: 'Montserrat';
     font-size: 15px;
     position: absolute;
-    /* background-color: blue; */
     color: white;
     transition-duration: 1.2s;
     transition-timing-function: ease-out;
@@ -166,28 +163,28 @@ img.link:hover {
     justify-content: space-between;
 }
 .about-button {
-    /* background-color: #909090; */
-    background-color: #212b66;
+    background-color: #909090;
+    /* background-color: #212b66; */
 }
 .projects-button {
-    /* background-color: #767676; */
-    background-color: #434C80;
+    background-color: #767676;
+    /* background-color: #434C80; */
 }
 .experience-button {
-    /* background-color: #606060; */
-    background-color: #59639a;
+    background-color: #606060;
+    /* background-color: #59639a; */
 }
 .about-button.hovered {
-    /* background-color: #ACACAC; */
-    background-color: #4855a3;
+    background-color: #ACACAC;
+    /* background-color: #4855a3; */
 }
 .projects-button.hovered {
-    /* background-color: #989898; */
-    background-color: #5965ab;
+    background-color: #989898;
+    /* background-color: #5965ab; */
 }
 .experience-button.hovered {
-    /* background-color: #858585; */
-    background-color: #6b77bc;
+    background-color: #858585;
+    /* background-color: #6b77bc; */
 }
 .button-text {
     z-index: 2;
@@ -228,8 +225,8 @@ svg.hovered {
 /* ------------------------ OVERLAY ------------------------ */
 .overlay {
     position: absolute;
-    /* background-color: #858383; */
-    background-color: #424660;
+    background-color: #858383;
+    /* background-color: #424660; */
     /* background-color: #555671; */
     opacity: 50%;
 }
