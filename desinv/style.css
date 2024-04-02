@@ -1,0 +1,90 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+#landing {
+    width: 100%;
+    height: 600px;
+    margin: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-image {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.monstera {
+    width: 100%;
+    opacity: 80%;
+    filter: blur(4px);
+    /* max-height: 500px; */
+    /* height: 100%; */
+}
+
+.team-members {
+    width: 90%;
+    height: 300px;
+    /* background-color: blue; */
+    position: absolute;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.member {
+    width: 22%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.photo-holder {
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 10px;
+    /* box-shadow: 2px 2px 2px rgb(15, 15, 15); */
+}
+
+.photo {
+    width: 100%;
+    height: auto;
+}
+
+.name {
+    width: 100%;
+    height: 20%;
+    font-size: x-large;
+    text-shadow: rgb(45, 45, 45) 1px 1px 2px;
+    color: rgb(240, 240, 240);
+    font-family: Montserrat;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#collaborative, #creative-matrix {
+    width: 100%;
+    /* height: 200px; */
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#creative-matrix {
+    
+}
