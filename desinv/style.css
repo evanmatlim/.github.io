@@ -20,12 +20,14 @@ html, body {
     height: 600px;
     overflow: hidden;
     position: absolute;
+    background-image: linear-gradient(to bottom right, rgb(37, 163, 222), rgb(204, 130, 208));
 }
 
 .monstera {
-    width: 100%;
-    opacity: 80%;
-    filter: blur(4px);
+    display: none;
+    /* width: 100%;
+    opacity: 90%;
+    filter: blur(4px); */
     /* max-height: 500px; */
     /* height: 100%; */
 }
