@@ -1,0 +1,71 @@
+/* ------- DEFAULT ------------------------------ */
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: var(--white);
+    /* background-color: var(--gray); */
+    position: relative;
+}
+
+:root {
+    --blue: #6D8BF5;
+    --darkBlue: rgb(77, 182, 124); 
+    --white: #EDEDED;
+    --lightGray: #a5a5a5;
+    --gray: #6B6B6B;
+    --darkGray: #5E5E5E;
+    /* --shadow:  */
+}
+
+.flex-centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ------- CONTENT ------------------------------ */
+
+.view {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 0;
+}
+
+.view.hidden {
+    display: none;
+}
+
+.action-button {
+    font-family: 'Raleway';
+    font-size: 14pt;
+    height: 50px;
+    background-color: var(--darkBlue);
+    box-shadow: 0px 1px 3px 0px var(--gray);
+    color: var(--white);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+#coach-holder {
+    display: flex;
+    flex-direction: column;
+    padding-top: 280px;
+    text-justify: center;
+    align-items: center;
+    color: gray;
+}

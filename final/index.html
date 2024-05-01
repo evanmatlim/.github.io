@@ -1,0 +1,196 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<head>
+  <title>Prepared</title>
+  <link rel="stylesheet" href="assets/css/loading.css">
+  <link rel="stylesheet" href="assets/css/plans.css">
+  <link rel="stylesheet" href="assets/css/profile.css">
+  <link rel="stylesheet" href="assets/css/navigation.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Inika' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <meta name = "viewport" content = "initial-scale = 1.0, user-scalable = no">
+  <!-- <meta name="theme-color" content="#6D8BF5"/> -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+</head>
+
+<body>
+
+    <!-- conatins the top bar "header" and bottom navbar "navbar" -->
+    <!-- <div id="nav-container">
+        <div id="header">
+            <div id="header-nav"></div>
+            <div id="header-menu"></div>
+        </div>
+        <div id="navbar">
+            <div class="clickable-area">
+                <div id="plans-button" class="clickable-navbar-button"></div>
+                <div id="coach-button" class="clickable-navbar-button"></div>
+                <div id="profile-button" class="clickable-navbar-button"></div>
+            </div>
+            <div class="active-icons">
+                <div class="active navbar-button">
+                    <img src="plansS.svg" class="navbar-icon">
+                    <div class="nav-highlight"></div>
+                </div>
+                <div class="selected active navbar-button">
+                    <img src="coachS.svg" class="navbar-icon">
+                    <div class="nav-highlight"></div>
+                </div>
+                <div class="active navbar-button">
+                    <img src="profileS.svg" class="navbar-icon">
+                    <div class="nav-highlight"></div>
+                </div>
+            </div>
+            <div class="inactive-icons">
+                <div class="navbar-button">
+                    <img src="plans.svg" class="navbar-icon">
+                </div>
+                <div class="navbar-button">
+                    <img src="coach.svg" class="navbar-icon">
+                </div>
+                <div class="navbar-button">
+                    <img src="profile.svg" class="navbar-icon">
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <div id="header">
+        <div id="header-nav">Coach</div>
+        <!-- <div id="header-menu"></div> -->
+    </div>
+    <div id="navbar">
+        <div class="clickable-area">
+            <div id="plans-button" class="clickable-navbar-button"></div>
+            <div id="coach-button" class="clickable-navbar-button"></div>
+            <div id="profile-button" class="clickable-navbar-button"></div>
+        </div>
+        <div class="active-icons">
+            <div class="active navbar-button">
+                <img src="plansS.svg" class="navbar-icon">
+                <div class="nav-highlight"></div>
+            </div>
+            <div class="selected active navbar-button">
+                <img src="coachS.svg" class="navbar-icon">
+                <div class="nav-highlight"></div>
+            </div>
+            <div class="active navbar-button">
+                <img src="profileS.svg" class="navbar-icon">
+                <div class="nav-highlight"></div>
+            </div>
+        </div>
+        <div class="inactive-icons">
+            <div class="navbar-button">
+                <img src="plans.svg" class="navbar-icon">
+            </div>
+            <div class="navbar-button">
+                <img src="coach.svg" class="navbar-icon">
+            </div>
+            <div class="navbar-button">
+                <img src="profile.svg" class="navbar-icon">
+            </div>
+        </div>
+    </div>
+
+    <!-- displays necessary alerts, otherwise hidden -->
+    <div id="overlay-view" class="hidden">
+
+    </div>
+    <!-- appears as opaque background when "overlay-container" appears-->
+    <div id="overlay-background" class="hidden"></div>
+
+    <!-- plans content -->
+    <div id="plans-view" class="view hidden">
+        <div class="navbar-filler"></div>
+        <div class="temporary-plans-message">
+            Go to Profile and add home <br>address to view Plans
+            <div class="profile-button action-button flex-centered">Profile</div>
+        </div>
+        <div id="plans-loading" class="flex-centered">
+            <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            <div style="color: white; font-size: 15pt; font-family: Raleway; text-shadow: 0px 1px 7px black;">Loading new plans</div>
+        </div>
+        <div id="plans-update" class="flex-centered">
+            <div id="plans-update-summary" class="flex-centered"></div>
+            <div id="plans-update-dismiss" class="action-button">See Plans</div>
+        </div>
+        <div id="plans-container">
+            <div id="create-plan" class="plan-section">
+                <div class="plan-name">Create New Plan</div>
+                <div class="create plan-arrow">+</div>
+            </div>
+        </div>
+        <div id="plan-displays">
+            <div id="create-plan-display" class="plan-display">
+                (to be implemented)
+                <div class="plans-button action-button">Back to Plans</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- coach content -->
+    <div id="coach-view" class="view">
+        <div class="navbar-filler"></div>
+        <!-- coach -->
+
+        <div id="coach-holder" class="plan-display">
+            (to be implemented)
+        </div>
+    </div>
+
+    <!-- profile content -->
+    <div id="profile-view" class="view hidden">
+        <div class="navbar-filler"></div>
+        <div id="profile-container">
+            <div id="address-section" class="profile-section">
+                <div class="address-header profile-header">Home Address</div>
+                <div id="temporary-address" class="action-button">
+                    Add Home Address
+                </div>
+                <div id="final-address">
+                    <div class="street-address address-field">
+                        <input type='text' id="street-input" class="field-input"><div onclick='$("#street-input").focus();'></div>
+                        Street Address
+                    </div>
+                    <div class="city-state address-field">
+                        <div class="city address-field">
+                            <input type='text' id="city-input" class="field-input"><div onclick='$("#city-input").focus();'></div>
+                            City
+                        </div>
+                        <div class="state address-field">
+                            <input type='text' id="state-input" class="field-input"><div onclick='$("#state-input").focus();'></div>
+                            State
+                        </div>
+                    </div>
+                    <div class="zipcode address-field">
+                        <input type="number" pattern="\d*" id="zipcode-input" class="field-input"><div onclick='$("#zipcode-input").focus();'></div>
+                        ZIP Code
+                    </div>
+                    <div id="address-error-message"></div>
+                    <div id="address-action" class="action-button">Save</div>
+                </div>
+            </div>
+            <div id="personal-section" class="profile-section">
+                <div class="personal-header profile-header">Personal Information</div>
+                <div class="temporary-household profile-section-content">(to be implemented)</div>
+            </div>
+            <div id="household-section" class="profile-section">
+                <div class="household-header profile-header">Household Information</div>
+                <div class="temporary-household profile-section-content">(to be implemented)</div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script type="text/javascript" src="assets/js/app.js"></script>
+</html>

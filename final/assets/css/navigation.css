@@ -1,0 +1,155 @@
+/* ------- NAVIGATION ------------------------------ */
+
+/* #nav-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+#header {
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    overflow: hidden;
+    z-index: 1;
+    background-color: var(--blue);
+    /* position: fixed;
+    overflow: hidden;
+    z-index: 1; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header-nav {
+    width: 25%;
+    height: 50px;
+    /* background-color: white; */
+    color: var(--white);
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 18pt;
+    font-family: "Raleway";
+    font-weight: bold;
+}
+
+#header-menu {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    background-color: white;
+}
+
+#navbar {
+    width: 100%;
+    height: 75px;
+    margin-top: 170%;
+    /* margin-top: calc(150%); */
+    position: fixed;
+    overflow: hidden;
+    z-index: 1;
+    background-color: var(--gray);
+    /* position: relative; */
+}
+
+.clickable-area {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    opacity: 0.4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.clickable-navbar-button {
+    width: 25%;
+    height: 100%;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    cursor: pointer;
+}
+
+.active-icons {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+}
+
+.inactive-icons {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    background-color: var(--gray);
+    /* display: none; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.active.navbar-button {
+    /* display: none; */
+    opacity: 0;
+    /* transition-duration: 100ms; */
+}
+
+.active.navbar-button.selected {
+    opacity: 1;
+}
+
+.navbar-button {
+    height: 100%;
+    width: 22%;
+    /* background-color: white; */
+    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+}
+
+.navbar-icon {
+    /* width:  */
+    margin-bottom: 2px;
+    z-index: 1;
+}
+
+.nav-highlight {
+    width: 110%;
+    height: 160%;
+    background: var(--darkGray);
+    position: absolute;
+    z-index: 0;
+    /* border-radius: 60%; */
+    margin-bottom: -25%;
+}
+
+.navbar-filler {
+    width: 100%;
+    height: 75px;
+    background-color: var(--white);
+}

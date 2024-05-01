@@ -1,0 +1,162 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<head>
+  <title>Des Inv 10</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/design.css">
+  <link href='https://fonts.googleapis.com/css?family=Inika' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+  <!-- <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>        
+    <div id="navbar-container">
+        <div id="navbar">
+            <div id="home-button" class="nav-button selected">Home</div>
+            <!-- <div id="product-button" class="nav-button">Our Product</div> -->
+            <div id="design-button" class="nav-button">Design Process</div>
+            <div id="team-button" class="nav-button">The Team</div>
+        </div>
+    </div>
+
+    <div id="home-container" class="content-container">
+        <div class="navbar-filler"></div>
+        <div class="home-content">
+            <div class="home-left">
+                <img src="assets/img/ttukbuddylogo.svg" class="ttukbuddy-logo">
+                <div class="line"></div>
+                <div class="home-text">
+                    <div class="home-text-header">Meet Ttuk Buddy</div>
+                    <div class="home-text-slogan">the kitchen companion that keeps<br>your food hot and your hands cool</div>
+                </div>
+            </div>
+            <div id="gif-container">
+                <video autoplay muted loop class="ttukbuddy-vid">
+                    <source src="assets/img/ttukbuddy.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <div id="product-container" class="content-container hidden">
+        <div class="navbar-filler"></div>
+        
+    </div>
+    
+    <div class="overlay-picture-container hidden">
+        <div id="clickable-overlay"></div>
+        <img src="assets/design/collaborative.svg" id="collaborative-expanded" class="overlay-picture hidden">
+    </div>
+    <div id="overlay" class="hidden"></div>
+    
+    <div id="design-container" class="content-container hidden">
+        <div class="navbar-filler"></div>
+        <div class="design-navbar">
+            <div id="ideation-button" class="active design-navbar-button flex-centered">Ideation</div>
+            <div id="prototyping-button" class="design-navbar-button flex-centered">Prototyping</div>
+            <div id="implementation-button" class="design-navbar-button flex-centered">Implementation</div>
+        </div>
+        <div class="design-content-container">
+            <div class="arrow-container">
+                <div id="left-arrow" class="arrow">&lt;</div>
+            </div>
+            <div id="design-content">
+                <div class="design-content-section-container">
+                    <div id="ideation-container" class="design-content-section">
+                        <div class="column">
+                            <div id="team-collaboration" class="design-component clickable-component">
+                                <div class="design-overlay"></div>
+                                <img src="assets/design/collaborative.svg" class="collaborative">
+                            </div>
+                        </div>
+                        <div class="column">
+                            
+                        </div>
+                    </div>
+                    <div id="prototyping-container" class="design-content-section">
+
+                    </div>
+                    <div id="implementation-container" class="design-content-section">
+
+                    </div>
+                </div>
+            </div>
+            <div class="arrow-container">
+                <div id="right-arrow" class="arrow on">&gt;</div>
+            </div>
+        </div>
+        <!-- <div class="design-columns">
+            <div class="design-column">
+                <div id="team-collaboration" class="design-component clickable-component">
+                    <div class="design-overlay"></div>
+                    <img src="assets/design/collaborative.svg" class="collaborative">
+                </div>
+                <div id="final-matrix" class="design-component">
+
+                </div>
+                <div id="storyboard" class="design-component">
+
+                </div>
+            </div>
+            <div class="design-column">
+                <div id="importance-matrix" class="design-component">
+
+                </div>
+                <div id="concept-poster" class="design-component">
+
+                </div>
+            </div>
+            <div class="design-column">
+                <div id="product-sketches" class="design-component">
+
+                </div>
+                <div id="moodboard" class="design-component">
+
+                </div>
+                <div id="logo-rationale" class="design-component">
+
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <div id="team-container" class="content-container hidden">
+        <div class="navbar-filler"></div>
+        <div class="cards-container">
+            <div class="card">
+                <div class="picture-container"><img src="assets/img/maria.png" class="picture"></div>
+                <div class="card-background">
+                    <div class="name flex-centered">Maria Estrada</div>
+                    <div class="description">Mechanical Engineering<br>3rd Year</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="picture-container"><img src="assets/img/liam.png" class="picture"></div>
+                <div class="card-background">
+                    <div class="name flex-centered">Liam Johnson</div>
+                    <div class="description">Mechanical Engineering<br>1st Year</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="picture-container"><img src="assets/img/seungyeon.png" class="picture"></div>
+                <div class="card-background">
+                    <div class="name flex-centered">Seungyeon Kim</div>
+                    <div class="description">Cognitive Science<br>3rd Year</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="picture-container"><img src="assets/img/evan.png" class="picture"></div>
+                <div class="card-background">
+                    <div class="name flex-centered">Evan Lim</div>
+                    <div class="description">Computer Science<br>4th Year</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="assets/js/app.js"></script>
+</html>

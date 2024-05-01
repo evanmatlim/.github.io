@@ -1,0 +1,272 @@
+
+/* ---- DEFAULT ---------------------------------------------- */
+
+html, body {
+    width: 100%;
+    height: 100%;
+    min-height: 700px;
+    margin: 0;
+    background-color: var(--lightShade);
+    position: relative;
+}
+
+:root {
+    --lightShade: #FBF5DE;
+    --lightAccent: #A89478;
+    --mainBrand: #CE9E76;
+    --darkAccent: #A57061;
+    --darkShade: #424070;
+    --shadow: #282828;
+}
+
+/* ---- GENERAL ---------------------------------------------- */
+
+.navbar-filler {
+    width: 100%;
+    height: 100px;
+    background-color: var(--lightShade);
+}
+
+.hidden {
+    display: none;
+}
+
+.flex-centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-container {
+    transition-duration: 200ms;
+}
+
+#overlay {
+    width: 100%;
+    height: 100%;
+    background-color: var(--shadow);
+    opacity: 0.3;
+    z-index: 3;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#overlay:hover {
+    cursor: pointer;
+}
+
+/* ---- NAVBAR ---------------------------------------------- */
+
+#navbar-container {
+    width: 100%;
+    min-width: 900px;
+    height: 100px;
+    background-color: var(--lightShade);
+    position: fixed;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+#navbar {
+    width: 60%;
+    min-width: 630px;
+    max-width: 690px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-button {
+    color: var(--lightAccent);
+    font-family: 'Inika';
+    font-size: 17pt;
+    transition-duration: 200ms;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-button:hover, .nav-button.selected {
+    color: var(--darkShade);
+    font-weight: bold;
+}
+
+
+/* ---- HOME ---------------------------------------------- */
+
+#home-container {
+    width: 100%;
+    min-width: 1000px;
+    height: 100%;
+    /* background: var(--darkShade); */
+    background-color: var(--lightShade);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content {
+    width: 80%;
+    max-width: 1100px;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-left {
+    width: 40%;
+    height: 90%;
+    border-width: 2px;
+    /* border-style: solid; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+.ttukbuddy-logo {
+    width: 90%;
+    height: auto;
+    /* margin-top: px; */
+}
+
+.line {
+    width: 100%;
+    height: 1.5px;
+    background-color: var(--darkShade);
+    margin-top: 30px;
+    margin-left: 5px;
+}
+
+.home-text {
+    font-family: 'Raleway';
+    width: 100%;
+    height: 35%;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+.home-text-header {
+    font-size: 24pt;
+    color: var(--darkShade);
+}
+
+.home-text-slogan {
+    margin-top: 15px;
+    font-size: 14pt;
+    font-style: italic;
+    /* font-weight: 300; */
+    color: var(--darkShade);
+}
+
+
+#gif-container {
+    width: 55%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.ttukbuddy-vid {
+    width: auto;
+    height: 100%;
+    margin-right: 120px;
+}
+
+
+/* ---- PRODUCT ---------------------------------------------- */
+
+#product-container {
+    width: 100%;
+    height: 100%;
+    /* background: var(--lightAccent); */
+    background-color: var(--lightShade);
+}
+
+
+/* ---- TEAM ---------------------------------------------- */
+
+#team-container {
+    width: 100%;
+    min-width: 1260px;
+    height: 100%;
+    min-height: 650px;
+    background-color: var(--lightShade);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-container {
+    width: 1200px;
+    height: 420px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card {
+    width: 22%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.picture-container {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 6px;
+    box-shadow: 0px 2px 7px 0px var(--shadow);
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+}
+
+.picture {
+    width: 102%;
+    height: auto;
+}
+
+.card-background {
+    width: 100%;
+    height: 70%;
+    border-radius: 3px;
+    margin-top: 100px;
+    position: relative;
+}
+
+.name {
+    width: 100%;
+    height: 10%;
+    font-family: 'Raleway';
+    font-size: 20pt;
+    color: var(--darkShade);
+    margin-top: 73%;
+}
+
+.description {
+    width: 100%;
+    height: 20%;
+    font-family: 'Raleway';
+    font-size: 10pt;
+    color: var(--lightAccent);
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
