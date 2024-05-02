@@ -56,10 +56,11 @@ function overlayOff() {
     overlayPictures.forEach((picture) => picture.classList.add("hidden"));
 }
 
-// each picture
-let collaborative = document.getElementById("team-collaboration");
-let collaborativeExpanded = document.getElementById("collaborative-expanded");
-collaborative.addEventListener('click', function (){collaborativeExpanded.classList.remove("hidden")});
+// // each picture
+clickableComponents.forEach((component) => component.addEventListener("click", () => {displayExpanded(component.id)}));
+function displayExpanded(componentId) {
+    document.getElementById(componentId + "-expanded").classList.remove("hidden");
+}
 
 // new stuff
 
