@@ -118,9 +118,10 @@ html, body {
 }
 
 .home-content {
-    width: 80%;
-    max-width: 1100px;
-    height: 70%;
+    width: 75%;
+    max-width: 1000px;
+    height: 60%;
+    margin-top: -50px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -202,11 +203,17 @@ html, body {
 
 /* ---- TEAM ---------------------------------------------- */
 
+.navbar-fillers {
+    width: 100%;
+    height: 140px;
+    background-color: var(--lightShade);
+}
+
 #team-container {
     width: 100%;
     min-width: 1000px;
     height: 100%;
-    min-height: 650px;
+    min-height: 750px;
     background-color: var(--lightShade);
     flex-direction: column;
     justify-content: center;
@@ -214,27 +221,28 @@ html, body {
 }
 
 .cards-container {
-    width: 950px;
-    height: 520px;
+    width: 600px;
+    height: 640px;
     /* margin-left: 130px; */
     /* background-color: gray; */
     display: flex;
-    /* flex-direction: column; */
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    /* flex-direction: row; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
 }
 
-/* .cards-row {
+.cards-row {
     width: 100%;
     height: 48%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-} */
+    justify-content: space-evenly;
+    /* background-color: gray; */
+}
 
 .card {
-    width: 22%;
+    width: 50%;
     height: 70%;
     position: relative;
     display: flex;
@@ -245,7 +253,7 @@ html, body {
 }
 
 .picture-container {
-    width: 100%;
+    width: 64%;
     aspect-ratio: 1;
     border-radius: 6px;
     box-shadow: 0px 2px 7px 0px var(--shadow);
@@ -263,7 +271,8 @@ html, body {
     width: 100%;
     height: 70%;
     border-radius: 3px;
-    margin-top: 80px;
+    margin-top: 69%;
+    /* margin-top: 6px; */
     /* margin-left: 53%;
     margin-top: -170px; */
     position: relative;
@@ -275,7 +284,7 @@ html, body {
     font-family: 'Raleway';
     font-size: 20pt;
     color: var(--darkShade);
-    margin-top: 73%;
+    /* margin-top: 67%; */
     text-align: center;
 }
 
@@ -285,7 +294,7 @@ html, body {
     font-family: 'Raleway';
     font-size: 10pt;
     color: var(--lightAccent);
-    margin-top: 12px;
+    margin-top: 25px;
     /* margin-left: px; */
     display: flex;
     flex-direction: column;
