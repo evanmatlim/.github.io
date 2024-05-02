@@ -108,7 +108,7 @@ function moveToPrototyping() {
     ideationActive = false;
     protoypingActive = true;
     implementationActive = false;
-    designContent.scrollLeft = 704;
+    designContent.scrollLeft = designContent.clientWidth;
     // designSectionContentContainer.style.marginLeft = "-100%";
     leftArrow.classList.add("on");
     rightArrow.classList.add("on");
@@ -120,7 +120,7 @@ function moveToImplementation() {
     ideationActive = false;
     protoypingActive = false;
     implementationActive = true;
-    designContent.scrollLeft = 1408;
+    designContent.scrollLeft = 2* designContent.clientWidth;
     // designSectionContentContainer.style.marginLeft = "-200%";
     leftArrow.classList.add("on");
     rightArrow.classList.remove("on");

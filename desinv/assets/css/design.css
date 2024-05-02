@@ -50,10 +50,10 @@
 }
 
 .design-content-container {
-    width: 800px;
-    height: 60%;
-    min-height: 470px;
-    max-height: 520px;
+    width: 900px;
+    height: 580px;
+    /* min-height: 470px;
+    max-height: 520px; */
     margin-top: 45px;
     overflow: hidden;
     display: flex;
@@ -134,6 +134,7 @@
     /* background-color: white; */
     display: flex;
     flex-direction: column;
+    /* justify-content: center; */
     /* justify-content: space-between; */
     align-items: center;
 }
@@ -143,7 +144,7 @@
 
     width: 90%;
     height: 30%;
-    background-color: var(--darkShade);
+    /* background-color: var(--darkShade); */
     overflow: hidden;
     box-shadow: 0px 2px 4px 0px var(--shadow);
     position: relative;
@@ -189,12 +190,12 @@
 }
 
 #importance {
-    height: 36%;
+    height: 34%;
 }
 
 
 #moodboard {
-    height: 36%;
+    height: 35%;
 }
 
 #concept {
@@ -202,7 +203,7 @@
 }
 
 #sketch {
-    height: 30%;
+    height: 28%;
 }
 
 #storyboard {
@@ -222,13 +223,14 @@
 }
 
 #presentation {
-    height: 36%;
+    height: 34%;
 }
 
 .design-preview {
     width: 100%;
     height: auto;
 }
+
 
 
 /* ---- DESIGN OVERLAY ------------------------------------ */
