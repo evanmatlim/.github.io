@@ -64,7 +64,7 @@
 #design-content {
     width: 88%;
     height: 100%;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 .arrow-container {
