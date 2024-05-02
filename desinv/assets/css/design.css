@@ -50,7 +50,7 @@
 }
 
 .design-content-container {
-    width: 790px;
+    width: 800px;
     height: 60%;
     min-height: 470px;
     max-height: 520px;
@@ -65,6 +65,7 @@
     width: 88%;
     height: 100%;
     overflow: scroll;
+    scroll-behavior: smooth;
 }
 
 .arrow-container {

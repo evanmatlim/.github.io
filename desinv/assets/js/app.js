@@ -96,7 +96,8 @@ function moveToIdeation() {
     ideationActive = true;
     protoypingActive = false;
     implementationActive = false;
-    designSectionContentContainer.style.marginLeft = "0px";
+    designContent.scrollLeft = 0;
+    // designSectionContentContainer.style.marginLeft = "0px";
     leftArrow.classList.remove("on");
     rightArrow.classList.add("on");
 }
@@ -107,7 +108,8 @@ function moveToPrototyping() {
     ideationActive = false;
     protoypingActive = true;
     implementationActive = false;
-    designSectionContentContainer.style.marginLeft = "-100%";
+    designContent.scrollLeft = 704;
+    // designSectionContentContainer.style.marginLeft = "-100%";
     leftArrow.classList.add("on");
     rightArrow.classList.add("on");
 }
@@ -118,7 +120,8 @@ function moveToImplementation() {
     ideationActive = false;
     protoypingActive = false;
     implementationActive = true;
-    designSectionContentContainer.style.marginLeft = "-200%";
+    designContent.scrollLeft = 1408;
+    // designSectionContentContainer.style.marginLeft = "-200%";
     leftArrow.classList.add("on");
     rightArrow.classList.remove("on");
 }
@@ -139,3 +142,48 @@ function clickRight() {
         moveToImplementation();
     }
 }
+
+
+let designContent = document.getElementById("design-content");
+designContent.addEventListener('scroll', function () {
+    console.log(designContent.scrollLeft);
+    if (designContent.scrollLeft > 1220) {
+        designNavbarButtons.forEach((button) => button.classList.remove('active'));
+        document.getElementById("implementation-button").classList.add("active");
+        ideationActive = false;
+        protoypingActive = false;
+        implementationActive = true;
+        // designSectionContentContainer.style.marginLeft = "-200%";
+        leftArrow.classList.add("on");
+        rightArrow.classList.remove("on");
+    } else if (designContent.scrollLeft > 500) {
+        designNavbarButtons.forEach((button) => button.classList.remove('active'));
+        document.getElementById("prototyping-button").classList.add("active");
+        ideationActive = false;
+        protoypingActive = true;
+        implementationActive = false;
+        // designSectionContentContainer.style.marginLeft = "-100%";
+        leftArrow.classList.add("on");
+        rightArrow.classList.add("on");
+    } else {
+        designNavbarButtons.forEach((button) => button.classList.remove('active'));
+        document.getElementById("ideation-button").classList.add("active");
+        ideationActive = true;
+        protoypingActive = false;
+        implementationActive = false;
+        // designSectionContentContainer.style.marginLeft = "0px";
+        leftArrow.classList.remove("on");
+        rightArrow.classList.add("on");
+    }
+    // if (scrollLeft !== element.scrollLeft) {
+    //     // horizontally scrolled
+
+    //     scrollLeft = element.scrollLeft;
+    // }
+
+    // if (scrollTop !== element.scrollTop) {
+    //     // vertically scrolled
+
+    //     scrollTop = element.scrollTop;
+    // }
+});
